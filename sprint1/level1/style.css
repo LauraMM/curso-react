@@ -1,0 +1,119 @@
+.wrapper {
+    max-width: 1200px;
+    margin:auto;
+
+  }
+  .wrapper > * {
+    margin: 20px;
+}
+header{ 
+    background-color:#000000;
+    padding:20px;
+
+}
+    .main-head{
+        background-color: #2d4059;
+        display:flex;
+        gap:20px;
+        padding:20px;
+        margin-bottom:10px;
+
+    }
+        .main-head div{background-color: #fa3f42;padding: 10px;}
+        .main-head div:first-child, .main-head div:last-child{flex-grow: 1;}
+        .main-head div:nth-of-type(2) {flex-grow: 3;}
+
+    nav{
+        background-color:#ff6923;
+        padding: 20px;
+    }
+    .main-nav, .main-footer{
+        background-color: #ffcc44;
+        padding:10px;
+}
+
+main{    
+    background-color:#000000;
+    padding:20px;
+    display: grid;
+    grid-template-areas:
+    "article article aside";
+    gap:20px;
+}
+article{
+    grid-area:article;
+    background-color: #004884;
+    padding: 20px;
+    display:flex;
+    flex-wrap: wrap;
+    align-items: stretch;
+    justify-content: space-between;
+    gap: 20px;
+
+}
+article div{
+    background-color: #0062a9;
+    width: 45%;   
+    padding: 10px;
+}
+article div:nth-child(5) {
+    background-color: #5499be;
+    width: 100%;
+  }
+aside{
+    grid-area:aside;
+    background-color: red;
+    padding: 20px;
+}
+aside div{
+    background-color: yellow;
+    padding:10px;
+
+}
+aside div:first-child{
+    margin-bottom:20px;
+
+}
+footer{    
+    background-color:#000000;
+    padding:20px;
+
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  
+    main {
+        background-color: yellow;
+        padding: 20px;
+    grid-template-areas:
+    "article article article"
+    "aside aside aside";
+        
+    }
+    
+  }
+  
+
+  @media (min-width: 320px) and (max-width: 767px){
+  
+    .main-head{
+    
+        flex-direction: column; 
+       
+    }
+    article div {
+        background-color: #0062a9;
+        width: 100%;
+        padding: 10px;
+    }
+    aside{background-color: #ff6923;}
+
+    main {
+        background-color: yellow;
+        padding: 20px;
+    grid-template-areas:
+    "article article article"
+    "aside aside aside";
+        
+    }
+  }

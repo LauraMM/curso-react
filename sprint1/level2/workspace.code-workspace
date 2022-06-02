@@ -1,0 +1,13 @@
+{
+	"folders": [
+		{
+			"path": "../.."
+		},
+		{
+			"path": "../../../work/Asepeyo"
+		}
+	],
+	"settings": {
+		"liveServer.settings.multiRootWorkspaceName": "Curso React"
+	}
+}
