@@ -1,5 +1,17 @@
-$primary:  #008fd8;
+$primary: #5265E1;
+$secondary: #FA5959;
 
 
 //import bootstrap
 @import '../node_modules/bootstrap/scss/bootstrap';
+
+
+#hamburger-icon {
+    &[aria-expanded*="false"] span {
+        background-image: url(../img/icon-hamburger.svg)
+    }
+
+    &[aria-expanded*="true"] span {
+        background-image: url(../img/icon-close.svg)
+    }
+}
