@@ -1,17 +1,154 @@
+$red: #FA5959;
+$secondary: $red;
 $primary: #5265E1;
-$secondary: #FA5959;
+$offcanvas-bg-color: #2f354f;
+
+$btn-border-width: 2px;
+$btn-padding-x: 2rem;
+$btn-font-size: 0.9rem;
+@import "../node_modules/bootstrap/scss/functions";
+@import "../node_modules/bootstrap/scss/variables";
+@import "../node_modules/bootstrap/scss/mixins";
+
+
+$nav-link-hover-color: $secondary;
+$nav-link-color: $black;
+
+
+.btn {
+    // normal css
+    box-shadow: 0px 0.4rem 0.6rem 0 rgba($primary, 0.3) !important;
+
+    &:hover {
+        cursor: pointer;
+        border: 2px solid;
+        background-color: transparent !important;
+
+    }
+}
+
+.btn-secondary {
+    color: $white  !important;
+
+    &:hover {
+        color: $secondary  !important;
+        border-color: $secondary;
+
+    }
+
+}
+
+
+.navbar-toggler-icon {
+    background-image: url(../img/icon-hamburger.svg)
+}
+
+.offcanvas-header button {
+    background: url(../img/icon-close.svg) no-repeat;
+    background-size: 1.5em;
+    opacity: 1;
+    margin-top: 0 !important;
+    margin-right: 0 !important;
+}
+
+.main-menu {
+    li {
+        margin: 0 2rem;
+        font-size: 0.9em;
+    }
+
+    button {
+        font-size: 0.9em;
+    }
+
+    @include media-breakpoint-down(sm) {
+
+
+        .nav-link {
+            color: $white  !important;
+            text-align: center;
+            font-size: 1.2em;
+
+        }
+
+        .nav-item {
+            border-top: 1px solid $white;
+            padding: 1rem 0;
+        }
+
+        .btn-secondary {
+            font-size: 1.1em;
+            color: $white  !important;
+            border: 2px solid $white  !important;
+            width: 100%;
+            background-color: transparent;
+            box-shadow: none !important;
+
+            &:hover {
+                background-color: $white  !important;
+                color: $black  !important;
+                border-color: $white  !important;
+
+            }
+
+        }
+
+
+
+    }
+
+}
+
+.your-class {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 600 200'%3E%3Cpath d='M10 10h123v123H10z'/%3E%3C/svg%3E");
+}
+
+
+@include media-breakpoint-down(md) {
+    #bg-shape .row {
+        flex-direction: column-reverse;
+    }
+
+
+}
+
+@include media-breakpoint-up(lg) {
+    .navbar-expand-lg .offcanvas {
+        background-color: transparent !important;
+    }
+
+
+}
+
+/*
+#contenido1 {
+    background: radial-gradient(circle farthest-side, $primary, $primary 90%, transparent 90%);
+}
+
+
+#bg-shape {
+
+
+    &::before {
+        content: "";
+        height: 38%;
+        width: 51%;
+        background-color: $primary;
+        border-radius: 34%;
+        position: absolute;
+        bottom: 36%;
+        z-index: -1;
+        right: -150px;
+        overflow: hidden;
+    }
+
+
+}*/
+
+
+
+
 
 
 //import bootstrap
 @import '../node_modules/bootstrap/scss/bootstrap';
-
-
-#hamburger-icon {
-    &[aria-expanded*="false"] span {
-        background-image: url(../img/icon-hamburger.svg)
-    }
-
-    &[aria-expanded*="true"] span {
-        background-image: url(../img/icon-close.svg)
-    }
-}
