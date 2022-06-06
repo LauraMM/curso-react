@@ -2,7 +2,7 @@ $red: #FA5959;
 $secondary: $red;
 $primary: #5265E1;
 $offcanvas-bg-color: #2f354f;
-
+$h1-font-size: 3.5rem;
 $btn-border-width: 2px;
 $btn-padding-x: 2rem;
 $btn-font-size: 0.9rem;
@@ -13,7 +13,6 @@ $btn-font-size: 0.9rem;
 
 $nav-link-hover-color: $secondary;
 $nav-link-color: $black;
-
 
 .btn {
     // normal css
@@ -27,6 +26,15 @@ $nav-link-color: $black;
     }
 }
 
+.btn-primary {
+
+    &:hover {
+        color: $primary  !important;
+
+    }
+
+}
+
 .btn-secondary {
     color: $white  !important;
 
@@ -37,6 +45,16 @@ $nav-link-color: $black;
     }
 
 }
+
+.btn-light {
+    &:hover {
+        color: $black  !important;
+        border-color: $black !important;
+
+    }
+
+}
+
 
 
 .navbar-toggler-icon {
@@ -99,18 +117,26 @@ $nav-link-color: $black;
 
 }
 
-.your-class {
-    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 600 200'%3E%3Cpath d='M10 10h123v123H10z'/%3E%3C/svg%3E");
+
+/*calcular acho vw en px*/
+@function get-vw($target) {
+    $vw-context: (1000*.01) * 1px;
+    @return ($target/$vw-context) * 1vw;
+}
+
+$window-width: get-vw(72px);
+
+.bg-image {
+    height: 75%;
+    width: 75%;
+    bottom: -20%;
+    border-bottom-left-radius: 100px;
+    z-index: -1;
+    background-color: $primary;
+    right: - $window-width*2;
 }
 
 
-@include media-breakpoint-down(md) {
-    #bg-shape .row {
-        flex-direction: column-reverse;
-    }
-
-
-}
 
 @include media-breakpoint-up(lg) {
     .navbar-expand-lg .offcanvas {
@@ -118,32 +144,24 @@ $nav-link-color: $black;
     }
 
 
+
+
 }
 
-/*
-#contenido1 {
-    background: radial-gradient(circle farthest-side, $primary, $primary 90%, transparent 90%);
-}
+@include media-breakpoint-up(md) {
 
 
-#bg-shape {
+    .imgLeft {
+        position: relative;
+    }
 
-
-    &::before {
-        content: "";
-        height: 38%;
-        width: 51%;
-        background-color: $primary;
-        border-radius: 34%;
+    .imgLeft>img {
         position: absolute;
-        bottom: 36%;
-        z-index: -1;
-        right: -150px;
-        overflow: hidden;
+        right: -15%;
     }
 
 
-}*/
+}
 
 
 
