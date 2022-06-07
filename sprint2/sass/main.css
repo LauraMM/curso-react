@@ -5,7 +5,7 @@
 .btn:hover {
   cursor: pointer;
   border: 2px solid;
-  background-color: transparent !important;
+  background-color: #fff !important;
 }
 
 .btn-primary:hover {
@@ -80,7 +80,8 @@
   border-bottom-left-radius: 100px;
   z-index: -1;
   background-color: #5265E1;
-  right: -12.5vw;
+  right: -14.4vw;
+  overflow-y: hidden;
 }
 
 @media (max-width: 575.98px) {
@@ -173,6 +174,16 @@
 
 .accordion button:hover {
   color: #FA5959;
+}
+
+form .valid-feedback {
+  color: #fff !important;
+  background-color: #198754;
+}
+
+form .invalid-feedback {
+  color: #fff !important;
+  background-color: #FA5959;
 }
 
 /*!

@@ -318,14 +318,45 @@
 
     </div>
     <div class="row">
-      <div class="col text-center pt-5"><a href="#" class="btn btn-primary">More info </a>
+
+      <div class="col text-center pt-5"><a href="#" class="btn btn-primary btn-lg">More info </a>
       </div>
     </div>
   </div>
+  <div class="container-fluid mt-5 py-5 bg-primary">
+    <div class="row justify-content-md-center">
+      <div class="col-lg-4 text-center">
+        <span class="text-uppercase text-light">35,000 already joined</span>
+        <p class="fs-1 text-light py-5 lh-1">Stay up-to-date with what we're doing</p>
 
+
+        <form class="row needs-validation d-flex " novalidate>
+
+          <div class="col-sm-8 position-relative">
+            <input type="text" class="form-control email" id="form-email"
+              pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" placeholder="Enter your email address"
+              aria-label="email" required>
+            <div class="valid-feedback feedback-pos">
+              Looks good!
+            </div>
+
+            <div class="invalid-feedback feedback-pos">
+              Whoops, make sure it's an email.
+            </div>
+          </div>
+          <div class="col-sm-4">
+            <button type="submit" class="btn btn-secondary" value="validate">Contact Us</button>
+          </div>
+        </form>
+      </div>
+    </div>
+
+  </div>
 
 
   <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="js/jquery-3.6.0.min.js"></script>
+  <script src="js/form-validation.js"></script>
 
 
 

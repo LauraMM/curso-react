@@ -11,6 +11,7 @@ $accordion-icon-active-color: $secondary;
 $accordion-icon-width: 2rem;
 $accordion-button-active-bg: transparent;
 $accordion-button-active-color: $primary;
+
 @import "../node_modules/bootstrap/scss/functions";
 @import "../node_modules/bootstrap/scss/variables";
 @import "../node_modules/bootstrap/scss/mixins";
@@ -26,8 +27,7 @@ $nav-link-color: $black;
     &:hover {
         cursor: pointer;
         border: 2px solid;
-        background-color: transparent !important;
-
+        background-color: $white  !important;
     }
 }
 
@@ -140,7 +140,8 @@ $window-width: get-vw(72px);
     border-bottom-left-radius: 100px;
     z-index: -1;
     background-color: $primary;
-    right: - 12.5vw;
+    right: - $window-width*2;
+    overflow-y: hidden;
 
     @include media-breakpoint-down(sm) {
         & {
@@ -264,11 +265,36 @@ $window-width: get-vw(72px);
 
 }
 
+
 .accordion {
     & button:hover {
         color: $secondary;
     }
 }
+
+
+form {
+    & .valid-feedback {
+
+        color: $white  !important;
+        background-color: $success;
+    }
+
+    & .invalid-feedback {
+
+        color: $white  !important;
+        background-color: $danger;
+    }
+
+}
+
+
+
+
+
+
+
+
 
 //import bootstrap
 @import '../node_modules/bootstrap/scss/bootstrap';
